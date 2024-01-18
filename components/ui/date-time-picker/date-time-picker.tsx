@@ -4,7 +4,6 @@ import { format } from "date-fns";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import { useRef, useState } from "react";
 import {
-  DateValue,
   TimeValue,
   useDateSegment,
   useInteractOutside,
@@ -24,7 +23,8 @@ import { Button } from "../button";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
 import { Toggle } from "../toggle";
 import { Calendar } from "../calendar";
-interface ExtendedDateValue extends DateValue {
+
+interface ExtendedDateValue {
   hour?: number;
   minute?: number;
   second?: number;
